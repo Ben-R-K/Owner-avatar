@@ -85,22 +85,25 @@ namespace Unittest
 
         public List<int> TheseventhofEratosthenes(int endnumber)
         {
-            List<int> numbers= new List<int>();
+            List<int> primenumbers= new List<int>();
+            List<int> numbers = new List<int>();
             for(int i=2; i < endnumber; i++)
             {
                 numbers.Add(i);
+                primenumbers.Add(i);
+
             }
 
             foreach (int i in numbers)
             {
                 int j = i;
-                for(int ii=0; ii<numbers.Count; ii++)
+                for(int ii=0; ii< primenumbers.Count-1; ii++)
                 {
-                    j =+ i;
-                    numbers.Remove(i*j);  
+                    primenumbers.Remove(i*j);
+                    j++;
                 }
             }
-            return numbers;
+            return primenumbers;
         }
     }
 }
