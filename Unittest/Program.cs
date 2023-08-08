@@ -9,7 +9,8 @@ namespace Unittest
             TaskClass taskclass= new TaskClass();
             Console.WriteLine("Hello World!");
 
-            taskclass.TwinNumberCounter();
+            int TwinCount = taskclass.TwinNumberCounter();
+            Console.WriteLine((TwinCount));
         }
     }
 }
