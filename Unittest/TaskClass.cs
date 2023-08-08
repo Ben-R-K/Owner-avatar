@@ -56,5 +56,29 @@ namespace Unittest
             }
             return TwinCount;
         }
+        public bool Triplets()
+        {
+            int[] ints = { 7, 11, 12, 14, 15, 16, 17, 20, 4 };
+            bool Triplets = false;
+            int TripletsCount = 0;
+
+            for (int i = 0; i < ints.Length - 1; i++)
+            {
+                if (ints[i]+1 == ints[i + 1])
+                {
+                    TripletsCount++;   
+                }
+                else
+                {
+                    TripletsCount = 0;
+                }
+               if(TripletsCount >= 3)
+                {
+                    Triplets= true;
+                    break;
+                }
+            }
+            return Triplets;
+        }
     }
 }
