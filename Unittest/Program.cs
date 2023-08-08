@@ -14,6 +14,14 @@ namespace Unittest
 
            bool Triplets = taskclass.Triplets();
             Console.WriteLine((Triplets));
+
+            List<int> primenumbers= new List<int>();
+            primenumbers = taskclass.TheseventhofEratosthenes(30);
+
+            foreach(int i in primenumbers)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
