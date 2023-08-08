@@ -11,6 +11,9 @@ namespace Unittest
 
             int TwinCount = taskclass.TwinNumberCounter();
             Console.WriteLine((TwinCount));
+
+           bool Triplets = taskclass.Triplets();
+            Console.WriteLine((Triplets));
         }
     }
 }
