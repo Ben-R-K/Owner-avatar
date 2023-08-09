@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -79,6 +81,29 @@ namespace Unittest
                 }
             }
             return Triplets;
+        }
+
+        public List<int> TheseventhofEratosthenes(int endnumber)
+        {
+            List<int> primenumbers= new List<int>();
+            List<int> numbers = new List<int>();
+            for(int i=2; i < endnumber; i++)
+            {
+                numbers.Add(i);
+                primenumbers.Add(i);
+
+            }
+
+            foreach (int i in numbers)
+            {
+                int j = i;
+                for(int ii=0; ii< primenumbers.Count-1; ii++)
+                {
+                    primenumbers.Remove(i*j);
+                    j++;
+                }
+            }
+            return primenumbers;
         }
     }
 }
