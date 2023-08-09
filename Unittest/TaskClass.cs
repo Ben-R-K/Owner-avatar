@@ -25,9 +25,8 @@ namespace Unittest
             }
         }
 
-        public int NumberSelecter()
+        public int NumberSelecter(int[] ints)
         {
-            int[] ints = { 190, 291, 145, 209, 280, 200 };
             int biggestint = ints[0];
             foreach (int i in ints)
             {
@@ -39,9 +38,8 @@ namespace Unittest
             return biggestint;
         }
 
-        public int TwinNumberCounter()
+        public int TwinNumberCounter(int[] ints)
         {
-            int[] ints = { 1, 3, 7, 7, 5, 3, 2, 2, 2, 2};
             bool Twin = false;
             int TwinCount = 0;
             for(int i=0; i<ints.Length-1; i++)

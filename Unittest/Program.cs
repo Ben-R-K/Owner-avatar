@@ -8,8 +8,11 @@ namespace Unittest
         {
             TaskClass taskclass= new TaskClass();
             Console.WriteLine("Hello World!");
+            int[] Bigints = { 190, 291, 145, 209, 280, 200 };
+            Console.WriteLine(taskclass.NumberSelecter(Bigints));
 
-            int TwinCount = taskclass.TwinNumberCounter();
+            int[] Twinints = { 1, 3, 7, 7, 5, 3, 2, 2, 2, 2 };
+            int TwinCount = taskclass.TwinNumberCounter(Twinints);
             Console.WriteLine((TwinCount));
 
            bool Triplets = taskclass.Triplets();

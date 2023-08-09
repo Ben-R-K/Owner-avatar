@@ -3,27 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Unittest;
 
 namespace Tester
 {
     public class TaskClassTester
     {
+        TaskClass taskclass = new TaskClass();
         [Fact]
         public void NumberSelecterSchuldReturnBiggest()
         {
             //arange
-            int[] testints = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            int biggestint = testints[0];
-            foreach (int i in testints)
-            {
-                if (i > biggestint)
-                {
-                    biggestint = i;
-                }
-            }
-            int Expected = biggestint;
+            int[] testints = { 190, 291, 145, 209, 280, 200 };
+            
             //act
-
+            int Actual = taskclass.NumberSelecter(testints);
             //assert
+            Assert.Equal(291, Actual);
         }
+
+        [Fact]
+        public void TwinNumberCounterSchuldReturnTwins()
+        {
+            //arange
+            int[] testints = { 1, 3, 7, 7, 5, 3, 2, 2, 2, 2 };
+            //act
+            int Actual = taskclass.TwinNumberCounter(testints);
+            //assert
+            Assert.Equal(3, Actual);
+        }
+
+        [Fact]
+        public void 
     }
+}
