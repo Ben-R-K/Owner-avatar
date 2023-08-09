@@ -105,5 +105,30 @@ namespace Unittest
             }
             return primenumbers;
         }
+
+        public List<string> HashFilter()
+        {
+            List<string> strings = new List<string>();
+            strings.AddRange(new string[] {"##abc##def", "12####78", "gar##d#en", "++##--##++"});
+            List<string> resultstings= new List<string>();
+
+            foreach(string s in strings)
+            {
+                int hashcount = 0;
+                for(int i=0; i<s.Length-1; i++)
+                {
+                    if (s.Substring(i, i+1) == "##")
+                    {
+                        hashcount++;
+                    }
+
+                    if( hashcount%2 >0 && hashcount > 0)
+                    {
+
+                    }
+                }
+            }
+            return resultstings;
+        }
     }
 }

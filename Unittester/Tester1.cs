@@ -12,7 +12,7 @@ namespace Unittester
         {
             //arange
             int[] testints = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-            int biggestint;
+            int biggestint = testints[0];
             foreach(int i in testints)
             {
                 if (i > biggestint)
