@@ -109,24 +109,35 @@ namespace Unittest
         public List<string> HashFilter()
         {
             List<string> strings = new List<string>();
-            strings.AddRange(new string[] {"##abc##def", "12####78", "gar##d#en", "++##--##++"});
+            strings.AddRange(new string[] {"##abc##def", "12####78", "gar##d#en", "++##--##++", "df##v#d##"});
             List<string> resultstings= new List<string>();
 
             foreach(string s in strings)
             {
                 int hashcount = 0;
+                string resultstring = null;
                 for(int i=0; i<s.Length-1; i++)
                 {
-                    if (s.Substring(i, i+1) == "##")
+                    if (s.Substring(i, 2) == "##")
                     {
                         hashcount++;
+                        i= i+2;
                     }
 
-                    if( hashcount%2 >0 && hashcount > 0)
+                    if ( hashcount%2 >0 && hashcount > 0)
                     {
-
+                        resultstring = resultstring + s.Substring(i,1);
                     }
                 }
+                if(hashcount%2 >0)
+                {
+                    resultstring.Remove(0);
+                }
+                else
+                {
+                    resultstings.Add(resultstring);
+                }
+                    
             }
             return resultstings;
         }

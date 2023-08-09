@@ -25,6 +25,11 @@ namespace Unittest
 
             List<string> strings = new List<string>();
             strings = taskclass.HashFilter();
+
+            foreach(string s in strings)
+            {
+                Console.WriteLine(s);
+            }
         }
     }
 }
