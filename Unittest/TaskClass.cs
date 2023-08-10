@@ -10,6 +10,9 @@ namespace Unittest
 {
     public class TaskClass
     {
+        /// <summary>
+        /// Writs a 1*1 table to the console.
+        /// </summary>
         public void TableCreator()
         {
             int[] teller1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -24,7 +27,11 @@ namespace Unittest
                 Console.WriteLine();
             }
         }
-
+        /// <summary>
+        /// Takes an array of ints and returns the one with the highest value.
+        /// </summary>
+        /// <param name="ints"></param>
+        /// <returns></returns>
         public int NumberSelecter(int[] ints)
         {
             int biggestint = ints[0];
@@ -37,7 +44,11 @@ namespace Unittest
             }
             return biggestint;
         }
-
+        /// <summary>
+        /// Takes an arry of ints and checks how many ints have a partner that is equal to them.
+        /// </summary>
+        /// <param name="ints"></param>
+        /// <returns>The amount of ints with a equal partner as an int.</returns>
         public int TwinNumberCounter(int[] ints)
         {
             bool Twin = false;
@@ -56,6 +67,10 @@ namespace Unittest
             }
             return TwinCount;
         }
+        /// <summary>
+        /// Returns true if a row of three numbers where every following number is one greater then the last.
+        /// </summary>
+        /// <returns></returns>
         public bool Triplets()
         {
             int[] ints = { 7, 11, 12, 14, 15, 16, 17, 20, 4 };
@@ -80,7 +95,11 @@ namespace Unittest
             }
             return Triplets;
         }
-
+        /// <summary>
+        /// Takes an int value and colects all primenumbers op to that value
+        /// </summary>
+        /// <param name="endnumber"></param>
+        /// <returns>Returns a int list with all the colected prime numbers.</returns>
         public List<int> TheseventhofEratosthenes(int endnumber)
         {
             List<int> primenumbers= new List<int>();
@@ -103,5 +122,6 @@ namespace Unittest
             }
             return primenumbers;
         }
+
     }
 }

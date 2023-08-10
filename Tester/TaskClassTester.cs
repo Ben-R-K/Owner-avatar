@@ -34,6 +34,29 @@ namespace Tester
         }
 
         [Fact]
-        public void 
+        public void TripletsMustReturnTreeNumberStringPlusOne()
+        {
+            //arange
+            bool Expected = true;
+            //act
+            bool Actual = taskclass.Triplets();
+            //assert
+            Assert.Equal(Expected, Actual);
+        }
+
+        [Fact]
+        public void TheseventhofEratosthenesSchuldReturnListOfPrimeNumbers()
+        {
+            List<int> Primenumbers = new List<int>();
+            int Expected = 129;
+
+            Primenumbers = taskclass.TheseventhofEratosthenes(30);
+            int Actual = 0;
+            foreach(int p in Primenumbers)
+            {
+                Actual = Actual + p;
+            }
+            Assert.Equal( Expected, Actual);
+        }
     }
 }
